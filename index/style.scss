@@ -24,8 +24,9 @@ a {
   margin: 0 auto;
 
   img {
+    margin: 25px 0;
     width: 150px;
-    height: 100px;
+    height: 50px;
   }
 }
 
@@ -259,8 +260,8 @@ a {
 	background: #eee;
 	border-radius: .4em;
   padding: 10px;
-  margin: 100px; // 나중에 지우기
   font-size: 13px;
+  margin: 50px; // 나중에 지우기
 
   img {
     width: 100%;
@@ -287,7 +288,7 @@ a {
 	background: #eee;
 	border-radius: .4em;
   padding: 10px;
-  margin: 100px; // 나중에 지우기
+  margin: 50px; // 나중에 지우기
   font-size: 13px;
 
   img {
@@ -306,7 +307,7 @@ a {
 	border-left-color: #eee;
 	border-right: 0;
 	margin-top: -24px;
-	margin-right: -15px;
+	margin-right: -14px;
 }
 
 .balloon-img {
@@ -331,5 +332,443 @@ a {
     border-radius: 2px;
     padding: 1px;
     margin-right: 2px;
+  }
+}
+
+// Menu : Team
+.nds-img {
+  width: 100%;
+  position: relative;
+}
+
+.nds-content {
+  width: 830px;
+  height: 470px;
+  background-color: #EBEBEB;
+  position: absolute;
+  top: 13%;
+  left: 23%;
+}
+
+
+.nds-top-item {
+  position: relative;
+}
+
+.nds-top-left-item {
+  width: 30px;
+  height: 30px;
+  margin: 15px 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  background-color: #888;
+}
+
+.nds-top-right-item {
+  display: flex;
+  justify-content: right;
+  margin-right: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  p {
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.about-main {
+  display: flex;
+}
+
+.nds-main-item {
+  width: 123%;
+  display: flex;
+  margin: 60px 20px;
+  overflow: hidden;
+}
+
+.btn {
+  margin: 10px 20px;
+  cursor: pointer;
+  img {
+    position: relative;
+    top: 140px;
+    width: 25px;
+  }
+}
+
+// 이미지 .nds-main-item의 overflow:hidden으로 오른쪽에 가려짐
+.logo-img {
+  cursor: pointer;
+  position: relative;
+
+  img {
+    width: 170px;
+    height: 170px;
+    margin: 20px;
+    object-fit: cover;
+
+    &:hover {
+    border: 5px solid #63F2D8;
+    transition: all 0.1s ease-in-out;
+    }
+  }
+}
+
+@mixin icon-style($color) {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+  color: $color;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+
+.about-icon-list {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  top: -13%;
+  
+  .fa-newspaper {
+    @include icon-style(#E70015)
+  }
+
+  .fa-cart-shopping {
+    @include icon-style(#DBA334)
+  }
+
+  .fa-image {
+    @include icon-style(#2C6DB8)
+  }
+
+  .fa-gear, .fa-power-off {
+    @include icon-style(#777)
+  }
+}
+
+.about-line {
+  width: 90%;
+  height: 1px;
+  background-color: #999;
+  margin: 0 auto;
+  position: relative;
+  bottom: 30px;
+}
+
+.about-footer {
+  width: 80%;
+  margin: -5px auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 10px;
+  img {
+    width: 30px;
+  }
+}
+
+.about-footer-btn {
+  width: 25px;
+  height: 25px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 23px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.about-footer-btn-box {
+  display: flex;
+}
+
+
+
+// team-content
+.team-about-top-content {
+  width: 90%;
+  height: 50px;
+  margin: 5px auto 0 auto;
+  display: flex;
+
+  h4 {
+    margin-top: 9px;
+  }
+}
+
+@mixin Vertical-line-style() {
+  width: 4px;
+  height: 20px;
+  background-color: #888;
+  margin: 10px;
+}
+
+@mixin Horizontal-line-style() {
+  width: 90%;
+  height: 1px;
+  background-color: #888;
+}
+
+.team-about-Vertical-line {
+  @include Vertical-line-style();
+}
+
+.team-about-Horizontal-line {
+  @include Horizontal-line-style();
+  margin: 0 auto;
+}
+
+.team-about-main-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.team-about-main-content-img {
+  width: 30%;
+  margin-left: 20px;
+  
+  img {
+    width: 150px;
+    margin-top: 35px;
+  }
+}
+
+.team-about-main-txt-box {
+  width: 70%;
+  height: 360px;
+  overflow-y: scroll;
+  white-space: break-spaces;
+  text-overflow: clip;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 40%;
+    background: #888;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+  }
+}
+
+.team-about-main-txt {
+  height: 50%;
+  color: #000;
+  position: relative;
+  top: -60px;
+}
+
+.team-about-main-title {
+  display: flex;
+  position: relative;
+  right: 8px;
+
+  h4 {
+    line-height: 40px;
+  }
+}
+
+.team-about-footer {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 10px;
+  img {
+    width: 30px;
+  }
+}
+
+.team-about-btn-list {
+  cursor: pointer;
+}
+
+
+// 반응형 코드
+@media screen and (max-width:1200px) {
+  // Menu : Team
+  .nds-content {
+    width: 645px;
+    height: 360px;
+    top: 10%;
+    }
+    
+    .nds-main-item {
+      margin: 10px;
+    }
+  
+    .btn {
+      margin: 10px 20px;
+      cursor: pointer;
+      img {
+        position: relative;
+        top: 80px;
+        width: 25px;
+      }
+    }
+  
+    .logo-img {
+      img {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+      }
+    }
+    
+    @mixin icon-style($color) {
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    
+    .about-icon-list {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+      top: -10px;
+    }
+
+    .about-line {
+      position: relative;
+      bottom: -5px;
+    }
+    
+    .about-footer {
+      margin: 25px auto;
+      img {
+        width: 25px;
+      }
+    }
+    
+    .about-footer-btn {
+      width: 22px;
+      height: 22px;
+      line-height: 19px;
+    }
+
+
+// team-content
+.team-about-top-content {
+  width: 90%;
+  height: 5  0px;
+  margin: 5px auto 0 auto;
+  display: flex;
+
+  h4 {
+    margin-top: 9px;
+  }
+}
+
+@mixin Vertical-line-style() {
+  width: 4px;
+  height: 20px;
+  background-color: #888;
+  margin: 10px;
+}
+
+@mixin Horizontal-line-style() {
+  width: 90%;
+  height: 1px;
+  background-color: #888;
+}
+
+.team-about-Vertical-line {
+  @include Vertical-line-style();
+}
+
+.team-about-Horizontal-line {
+  @include Horizontal-line-style();
+  margin: 0 auto;
+}
+
+.team-about-main-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.team-about-main-content-img {
+  width: 30%;
+  margin-left: 20px;
+  
+  img {
+    width: 150px;
+    margin-top: 35px;
+  }
+}
+
+.team-about-main-txt-box {
+  width: 70%;
+  height: 250px;
+  overflow-y: scroll;
+  white-space: break-spaces;
+  text-overflow: clip;
+
+  &::-webkit-scrollbar {
+    width: 15px;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 40%;
+    background: #888;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+  }
+}
+
+.team-about-main-txt {
+  height: 80%;
+  color: #000;
+  position: relative;
+  top: -60px;
+}
+
+.team-about-main-title {
+  display: flex;
+  position: relative;
+  right: 8px;
+
+  h4 {
+    line-height: 40px;
+  }
+}
+
+.team-about-footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: -10px;
+  img {
+    width: 30px;
+  }
+}
+
+.team-about-btn-list {
+  cursor: pointer;
   }
 }
